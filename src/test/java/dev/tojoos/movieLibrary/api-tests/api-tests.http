@@ -1,0 +1,148 @@
+POST http://localhost:8080/movies/addAll
+Content-Type: application/json
+
+[
+  {
+    "name": "Movie1",
+    "rating": "5"
+  },
+  {
+    "name": "Movie2",
+    "rating": "10"
+  },
+  {
+    "name": "Movie3",
+    "rating": "3"
+  },
+  {
+    "name": "Movie4",
+    "rating": "4"
+  }
+]
+
+###
+
+GET http://localhost:8080/movies
+
+###
+
+GET http://localhost:8080/movies/1
+
+###
+
+GET http://localhost:8080/movies/99
+
+###
+
+POST http://localhost:8080/movies/add
+Content-Type: application/json
+
+{
+  "name": "somename1",
+  "rating": "2"
+}
+
+###
+
+POST http://localhost:8080/movies/add
+Content-Type: application/json
+
+{
+  "rating": "somerating1"
+}
+
+###
+
+POST http://localhost:8080/movies/add
+Content-Type: application/json
+
+{
+  "name": "somename1",
+  "rating": "-11"
+}
+
+###
+
+POST http://localhost:8080/movies/addAll
+Content-Type: application/json
+
+[
+  {
+    "name": "somename2",
+    "rating": "6"
+  },
+  {
+    "name": "somename3",
+    "rating": "5"
+  }
+]
+
+###
+
+POST http://localhost:8080/movies/addAll
+Content-Type: application/json
+
+[
+  {
+    "rating": "6"
+  },
+  {
+    "name": "somename3",
+    "rating": "-11"
+  }
+]
+
+###
+
+PUT http://localhost:8080/movies/update/2
+Content-Type: application/json
+
+{
+  "name": "2012",
+  "rating": "5"
+}
+
+###
+
+PUT http://localhost:8080/movies/update/2
+Content-Type: application/json
+
+{
+  "name": "2012",
+  "rating": "-5"
+}
+
+###
+
+PUT http://localhost:8080/movies/update/2
+Content-Type: application/json
+
+{
+  "rating": "5"
+}
+
+###
+
+PATCH http://localhost:8080/movies/update/3
+Content-Type: application/json
+
+{
+  "rating": "9"
+}
+
+###
+
+PATCH http://localhost:8080/movies/3
+Content-Type: application/json
+
+{
+  "rating": "-10"
+}
+
+###
+
+DELETE http://localhost:8080/movies/delete/99
+
+###
+
+DELETE http://localhost:8080/movies/delete/2
