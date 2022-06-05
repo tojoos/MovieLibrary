@@ -1,0 +1,6 @@
+CREATE TABLE movie (
+    id INT NOT NULL AUTO_INCREMENT,
+    name VARCHAR(200) DEFAULT NULL,
+    rating INT DEFAULT NULL,
+    PRIMARY KEY (id)
+)
